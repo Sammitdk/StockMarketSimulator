@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stock_simulator_app/GuestWelcomePage.dart';
 import 'package:stock_simulator_app/login_page.dart';
 import 'package:stock_simulator_app/signup_page.dart';
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
                 height: 50,
                 width: 200,
                 child: ElevatedButton(onPressed: () {
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const LoginPage()));
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => const LoginPage()));
                   },
                     style: ButtonStyle(
                         minimumSize: MaterialStateProperty.all(const Size.fromRadius(18)),
@@ -42,7 +43,7 @@ class MyApp extends StatelessWidget {
                 height: 50,
                 width: 200,
                 child: ElevatedButton(onPressed: () {
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const SignupPage()));
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => const SignupPage()));
                 },
                     style: ButtonStyle(
                         minimumSize: MaterialStateProperty.all(const Size.fromRadius(18)),
@@ -60,7 +61,7 @@ class MyApp extends StatelessWidget {
                 height: 30,
                 width: 200,
                 child: TextButton(onPressed: () {
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const LoginPage()));
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const GuestWelcomePage()));
                 },
                     style: ButtonStyle(
                         foregroundColor: MaterialStateProperty.all(Colors.white),
@@ -75,6 +76,7 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 70,),
+
             ],
           ),
         ],

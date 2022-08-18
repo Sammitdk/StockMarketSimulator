@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stock_simulator_app/PasswordRecovery.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -10,7 +11,7 @@ class LoginPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.orange,
         title: const Center(
-          child: Text('Login',
+          child: Text('Stock Market Simulator',
           ),
         ),
       ),
@@ -38,10 +39,10 @@ class LoginPage extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 30,
+            height: 40,
             width: 200,
             child: TextButton(onPressed: () {
-              Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const LoginPage()));
+              Navigator.push(context, MaterialPageRoute(builder: (_) => const PasswordRecovery()));
             },
               child: const Text('Forgot Password',
               style: TextStyle(
@@ -52,14 +53,14 @@ class LoginPage extends StatelessWidget {
           ),
           const SizedBox(
             height: 10,
-            width: 50,
+            width: 10,
           ),
           SizedBox(
             height: 50,
             width: 200,
             child: ElevatedButton(onPressed: () {
               //logged in
-              // Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const LoggedInPage()));
+              // Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const WelcomePage()));
             },
                 style: ButtonStyle(
                   minimumSize: MaterialStateProperty.all(const Size.fromRadius(18)),
@@ -71,6 +72,10 @@ class LoginPage extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                 ),))
+          ),
+          const SizedBox(
+            height: 10,
+            width: 50,
           )
 
         ],

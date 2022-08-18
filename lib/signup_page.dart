@@ -10,7 +10,7 @@ class SignupPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.orange,
         title: const Center(
-          child: Text('Sign up',
+          child: Text('Stock Market Simulator',
           ),
         ),
       ),
@@ -65,19 +65,7 @@ class SignupPage extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
-            height: 30,
-            width: 200,
-            child: TextButton(onPressed: () {
-              // Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const LoginPage()));
-            },
-              child: const Text('Forgot Password',
-                style: TextStyle(
-                  fontSize: 15,
-                  color: Colors.orange,
-                ),),
-            ),
-          ),
+
           const SizedBox(
             height: 10,
             width: 50,
@@ -99,7 +87,7 @@ class SignupPage extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
                     ),))
-          )
+          ),
 
         ],
       ),
