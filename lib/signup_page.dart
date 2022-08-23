@@ -18,7 +18,7 @@ class SignupPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const Padding(
-            padding: EdgeInsets.all(10.0),
+            padding: EdgeInsets.fromLTRB(25, 10, 25, 10),
             child: TextField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
@@ -28,7 +28,7 @@ class SignupPage extends StatelessWidget {
             ),
           ),
           const Padding(
-            padding: EdgeInsets.all(10.0),
+            padding: EdgeInsets.fromLTRB(25, 10, 25, 10),
             child: TextField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
@@ -37,7 +37,7 @@ class SignupPage extends StatelessWidget {
               ),
             ),
           ),const Padding(
-            padding: EdgeInsets.all(10.0),
+            padding: EdgeInsets.fromLTRB(25, 10, 25, 10),
             child: TextField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
@@ -46,7 +46,7 @@ class SignupPage extends StatelessWidget {
               ),
             ),
           ),const Padding(
-            padding: EdgeInsets.all(10.0),
+            padding: EdgeInsets.fromLTRB(25, 10, 25, 10),
             child: TextField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
@@ -56,7 +56,7 @@ class SignupPage extends StatelessWidget {
             ),
           ),
           const Padding(
-            padding: EdgeInsets.all(10.0),
+            padding: EdgeInsets.fromLTRB(25, 10, 25, 10),
             child: TextField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
@@ -75,7 +75,7 @@ class SignupPage extends StatelessWidget {
               width: 200,
               child: ElevatedButton(onPressed: () {
                 //logged in
-                // Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const LoggedInPage()));
+                // Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const LoginPage()));
               },
                   style: ButtonStyle(
                     minimumSize: MaterialStateProperty.all(const Size.fromRadius(18)),

@@ -15,12 +15,17 @@ class MyApp extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Row(
+
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              // Image.asset("assets/images/login.gif"),
+              Image.asset("assets/images/gif1.gif",
+              scale: 2,),
+              const SizedBox(
+                height: 150,
+              ),
               SizedBox(
                 height: 50,
                 width: 200,
@@ -38,7 +43,7 @@ class MyApp extends StatelessWidget {
                     ),)
                 ),
               ),
-              const SizedBox(height: 15,),
+              const SizedBox(height: 25,),
               SizedBox(
                 height: 50,
                 width: 200,
@@ -56,7 +61,7 @@ class MyApp extends StatelessWidget {
                       ),)
                 ),
               ),
-              const SizedBox(height: 15,),
+              const SizedBox(height: 25,),
               SizedBox(
                 height: 30,
                 width: 200,
@@ -76,7 +81,6 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 70,),
-
             ],
           ),
         ],
