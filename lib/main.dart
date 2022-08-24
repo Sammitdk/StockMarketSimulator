@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
                     style: ButtonStyle(
                         minimumSize: MaterialStateProperty.all(const Size.fromRadius(18)),
                         foregroundColor: MaterialStateProperty.all(Colors.white),
-                        backgroundColor: MaterialStateProperty.all(Colors.orange)
+                        backgroundColor: MaterialStateProperty.all(const Color(0xFF3456FF))
                     ),
                     child: const Text('Login',
                     style: TextStyle(
@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
                     style: ButtonStyle(
                         minimumSize: MaterialStateProperty.all(const Size.fromRadius(18)),
                         foregroundColor: MaterialStateProperty.all(Colors.white),
-                        backgroundColor: MaterialStateProperty.all(Colors.orange)
+                        backgroundColor: MaterialStateProperty.all(const Color(0xFF3456FF))
                     ),
                     child: const Text('Sign up',
                       style: TextStyle(
@@ -66,7 +66,7 @@ class MyApp extends StatelessWidget {
                 height: 30,
                 width: 200,
                 child: TextButton(onPressed: () {
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const GuestWelcomePage()));
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => const GuestWelcomePage()));
                 },
                     style: ButtonStyle(
                         foregroundColor: MaterialStateProperty.all(Colors.white),
@@ -75,7 +75,7 @@ class MyApp extends StatelessWidget {
                     child: const Text('Skip for now >>',
                       style: TextStyle(
                         fontSize: 15,
-                        color: Colors.orange,
+                        color: Color(0xFF3456FF),
                         decoration: TextDecoration.underline,
                       ),)
                 ),

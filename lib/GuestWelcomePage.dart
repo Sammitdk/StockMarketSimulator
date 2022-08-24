@@ -7,7 +7,7 @@ class GuestWelcomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.orange,
+        backgroundColor: (const Color(0xFF3456FF)),
         title: const Center(
           child: Text('Welcome',
           style: TextStyle(
@@ -25,7 +25,7 @@ class GuestWelcomePage extends StatelessWidget {
               const Text('Stock',
               style: TextStyle(
                 fontSize: 50,
-                color: Colors.orange,
+                color: Color(0xFF3456FF),
                 fontWeight: FontWeight.bold
               ),),
               const SizedBox(
@@ -34,7 +34,7 @@ class GuestWelcomePage extends StatelessWidget {
               const Text('Market',
               style: TextStyle(
                 fontSize: 50,
-                color: Colors.orange,
+                color: Color(0xFF3456FF),
                   fontWeight: FontWeight.bold
               ),),
               const SizedBox(
@@ -43,7 +43,7 @@ class GuestWelcomePage extends StatelessWidget {
               const Text('Simulator',
               style: TextStyle(
                 fontSize: 50,
-                color: Colors.orange,
+                color: Color(0xFF3456FF),
                   fontWeight: FontWeight.bold
               ),),
               const SizedBox(
@@ -57,7 +57,7 @@ class GuestWelcomePage extends StatelessWidget {
                 },
                   style: ButtonStyle(
                     minimumSize: MaterialStateProperty.all(const Size.fromRadius(18)),
-                    backgroundColor: MaterialStateProperty.all(Colors.orange),
+                    backgroundColor: MaterialStateProperty.all(const Color(0xFF3456FF)),
                   ),
                 child: const Text('Continue',
                     style: TextStyle(

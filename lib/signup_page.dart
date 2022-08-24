@@ -8,7 +8,7 @@ class SignupPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.orange,
+        backgroundColor: (const Color(0xFF3456FF)),
         title: const Center(
           child: Text('Stock Market Simulator',
           ),
@@ -17,8 +17,17 @@ class SignupPage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+        Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Image.asset('assets/images/signin.gif',
+          scale: 3.5,
+          ),
+        ),
+          const SizedBox(
+            height: 0,
+          ),
           const Padding(
-            padding: EdgeInsets.fromLTRB(25, 10, 25, 10),
+            padding: EdgeInsets.fromLTRB(25, 0, 25, 10),
             child: TextField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
@@ -79,7 +88,7 @@ class SignupPage extends StatelessWidget {
               },
                   style: ButtonStyle(
                     minimumSize: MaterialStateProperty.all(const Size.fromRadius(18)),
-                    backgroundColor: MaterialStateProperty.all(Colors.orange),
+                    backgroundColor: MaterialStateProperty.all(const Color(0xFF3456FF)),
                   ),
                   child:const Text('Sign up',
                     style: TextStyle(

@@ -7,15 +7,19 @@ class PasswordRecovery extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.orange,
+        backgroundColor: (const Color(0xFF3456FF)),
         title: const Center(child: Text('Password Recovery')),
       ),
       backgroundColor: Colors.white,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Image.asset('assets/images/forgetpassword.gif',
+          scale: 2,
+          ),
+
           const Padding(
-              padding: EdgeInsets.all(10),
+              padding: EdgeInsets.fromLTRB(25, 0, 25, 10),
               child: TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
@@ -24,7 +28,7 @@ class PasswordRecovery extends StatelessWidget {
               ),
           ),
           const Padding(
-            padding: EdgeInsets.all(10),
+            padding: EdgeInsets.fromLTRB(25, 10, 25, 10),
             child: TextField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
@@ -33,7 +37,7 @@ class PasswordRecovery extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 10,
+            height: 30,
           ),
           SizedBox(
             height: 50,
@@ -43,7 +47,7 @@ class PasswordRecovery extends StatelessWidget {
             },
               style: ButtonStyle(
                 minimumSize: MaterialStateProperty.all(const Size.fromRadius(18)),
-                backgroundColor: MaterialStateProperty.all(Colors.orange),
+                backgroundColor: MaterialStateProperty.all(const Color(0xFF3456FF)),
               ),
               child: const Text('Verify',
               style: TextStyle(

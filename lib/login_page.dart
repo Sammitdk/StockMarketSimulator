@@ -9,7 +9,7 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.orange,
+        backgroundColor: (const Color(0xFF3456FF)),
         title: const Center(
           child: Text('Stock Market Simulator',
           ),
@@ -18,7 +18,7 @@ class LoginPage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset("assets/images/gif3.gif",
+          Image.asset("assets/images/login.gif",
             scale: 2,),
           const Padding(
             padding: EdgeInsets.fromLTRB(25, 10, 25, 10),
@@ -49,7 +49,7 @@ class LoginPage extends StatelessWidget {
               child: const Text('Forgot Password',
               style: TextStyle(
                 fontSize: 15,
-                color: Colors.orange,
+                color: Color(0xFF3456FF),
               ),),
             ),
           ),
@@ -66,7 +66,7 @@ class LoginPage extends StatelessWidget {
             },
                 style: ButtonStyle(
                   minimumSize: MaterialStateProperty.all(const Size.fromRadius(18)),
-                  backgroundColor: MaterialStateProperty.all(Colors.orange),
+                  backgroundColor: MaterialStateProperty.all(const Color(0xFF3456FF)),
                 ),
                 child:const Text('Login',
                 style: TextStyle(
