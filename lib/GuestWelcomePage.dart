@@ -22,33 +22,38 @@ class GuestWelcomePage extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text('Stock',
-              style: TextStyle(
-                fontSize: 50,
-                color: Color(0xFF3456FF),
-                fontWeight: FontWeight.bold
-              ),),
+              Image.asset('assets/images/logintobuy.gif',
+                scale: 2.5,
+              ),
+              const Text('Buy and sell stocks easily !',
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Color(0xFF3456FF),
+                    fontStyle: FontStyle.italic
+                ),),
               const SizedBox(
                 height: 20,
               ),
-              const Text('Market',
-              style: TextStyle(
-                fontSize: 50,
-                color: Color(0xFF3456FF),
-                  fontWeight: FontWeight.bold
-              ),),
+              Image.asset('assets/images/securelogin.gif',
+                scale: 2.5,
+              ),
               const SizedBox(
                 height: 20,
               ),
-              const Text('Simulator',
-              style: TextStyle(
-                fontSize: 50,
-                color: Color(0xFF3456FF),
-                  fontWeight: FontWeight.bold
-              ),),
+              const Text('Secure transactions !',
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Color(0xFF3456FF),
+                    fontStyle: FontStyle.italic
+                ),),
               const SizedBox(
-                height: 200,
+                height: 100,
               ),
+
+              const SizedBox(
+                height: 20,
+              ),
+
               SizedBox(
                 height: 50,
                 width: 150,
@@ -61,7 +66,6 @@ class GuestWelcomePage extends StatelessWidget {
                   ),
                 child: const Text('Continue',
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
                       fontSize: 20,
                     ),),
                 ),
