@@ -1,12 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:stock_simulator_app/PasswordRecovery.dart';
+import 'package:stock_simulator_app/home_page.dart';
+import 'package:stock_simulator_app/wrapper.dart';
+
+import 'firebase/firebase_auth.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  LoginPage({Key? key}) : super(key: key);
+
+  final email = TextEditingController();
+  final pass = TextEditingController();
+  Auth auth = Auth();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: (const Color(0xFF3456FF)),
@@ -20,20 +29,22 @@ class LoginPage extends StatelessWidget {
         children: [
           Image.asset("assets/images/login.gif",
             scale: 2,),
-          const Padding(
-            padding: EdgeInsets.fromLTRB(25, 10, 25, 10),
+           Padding(
+            padding: const EdgeInsets.fromLTRB(25, 10, 25, 10),
             child: TextField(
-              decoration: InputDecoration(
+              controller: email,
+              decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Username /email',
                 // hintText: 'Enter valid email !',
               ),
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.fromLTRB(25, 10, 25, 10),
+           Padding(
+            padding: const EdgeInsets.fromLTRB(25, 10, 25, 10),
             child: TextField(
-              decoration: InputDecoration(
+              controller: pass,
+              decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Password',
                 // hintText: 'Enter Password !',
@@ -43,7 +54,7 @@ class LoginPage extends StatelessWidget {
           SizedBox(
             height: 40,
             width: 200,
-            child: TextButton(onPressed: () {
+            child: TextButton(onPressed: () async {
               Navigator.push(context, MaterialPageRoute(builder: (_) => const PasswordRecovery()));
             },
               child: const Text('Forgot Password',
@@ -60,9 +71,12 @@ class LoginPage extends StatelessWidget {
           SizedBox(
             height: 50,
             width: 200,
-            child: ElevatedButton(onPressed: () {
-              //logged in
-              // Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const WelcomePage()));
+            child: ElevatedButton(onPressed: () async {
+              if(await auth.signIn(username: email.text, password: pass.text) != null) {
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const HomePage()));
+              }else{
+              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Incorrect Email Address or Password'),));
+              }
             },
                 style: ButtonStyle(
                   minimumSize: MaterialStateProperty.all(const Size.fromRadius(18)),

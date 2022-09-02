@@ -1,11 +1,17 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:stock_simulator_app/GuestWelcomePage.dart';
 import 'package:stock_simulator_app/login_page.dart';
 import 'package:stock_simulator_app/signup_page.dart';
 
-void main() => runApp(const MaterialApp(
-  home: MyApp(),
-));
+void main() async {
+
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(const MaterialApp(
+    home: MyApp(),
+  ));
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -15,7 +21,6 @@ class MyApp extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Row(
-
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Column(
@@ -30,7 +35,7 @@ class MyApp extends StatelessWidget {
                 height: 50,
                 width: 200,
                 child: ElevatedButton(onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (_) => const LoginPage()));
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => LoginPage()));
                   },
                     style: ButtonStyle(
                         minimumSize: MaterialStateProperty.all(const Size.fromRadius(18)),
