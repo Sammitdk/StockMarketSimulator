@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stock_simulator_app/AnonymousUser/GuestUserLoggedIn.dart';
 
 class GuestWelcomePage extends StatelessWidget {
   const GuestWelcomePage({Key? key}) : super(key: key);
@@ -58,7 +59,7 @@ class GuestWelcomePage extends StatelessWidget {
                 height: 50,
                 width: 150,
                 child: ElevatedButton(onPressed: () {
-                  //navigate to homepage for guest user
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => const GuestUser()));
                 },
                   style: ButtonStyle(
                     minimumSize: MaterialStateProperty.all(const Size.fromRadius(18)),

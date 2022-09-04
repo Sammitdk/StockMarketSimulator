@@ -1,15 +1,16 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:stock_simulator_app/GuestWelcomePage.dart';
+import 'package:stock_simulator_app/AnonymousUser/GuestWelcomePage.dart';
 import 'package:stock_simulator_app/login_page.dart';
 import 'package:stock_simulator_app/signup_page.dart';
+import 'package:stock_simulator_app/wrapper.dart';
 
 void main() async {
 
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(const MaterialApp(
-    home: MyApp(),
+  runApp( MaterialApp(
+    home: Wrapper(),
   ));
 }
 

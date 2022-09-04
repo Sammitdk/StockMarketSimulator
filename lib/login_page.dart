@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stock_simulator_app/PasswordRecovery.dart';
 import 'package:stock_simulator_app/home_page.dart';
-import 'package:stock_simulator_app/wrapper.dart';
-
 import 'firebase/firebase_auth.dart';
 
 class LoginPage extends StatelessWidget {
@@ -47,7 +45,6 @@ class LoginPage extends StatelessWidget {
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Password',
-                // hintText: 'Enter Password !',
               ),
             ),
           ),
@@ -73,7 +70,7 @@ class LoginPage extends StatelessWidget {
             width: 200,
             child: ElevatedButton(onPressed: () async {
               if(await auth.signIn(username: email.text, password: pass.text) != null) {
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const HomePage()));
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => HomePage()));
               }else{
               ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Incorrect Email Address or Password'),));
               }
@@ -93,7 +90,6 @@ class LoginPage extends StatelessWidget {
             height: 10,
             width: 50,
           )
-
         ],
       ),
     );
