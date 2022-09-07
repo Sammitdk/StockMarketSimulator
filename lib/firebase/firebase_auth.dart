@@ -10,12 +10,13 @@ class Auth{
   Stream<User?> get user {
     return auth.authStateChanges().map(_userFromCredUser);
   }
+
 //log in
   Future signIn({required String username, required String password}) async
   {
     try
     {
-      final UserCredential result = await FirebaseAuth.instance.signInWithEmailAndPassword(email: username, password: password);
+      final UserCredential result = await auth.signInWithEmailAndPassword(email: username, password: password);
       //we got user
       User? user = result.user;
 
@@ -31,13 +32,13 @@ class Auth{
   {
     try
     {
-      return await auth.signOut();
+       await auth.signOut();
     }
     catch(e)
     {
       print(e.toString());
-      return null;
     }
+    return null;
   }
 
   //guest login

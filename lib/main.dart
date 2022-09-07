@@ -6,7 +6,6 @@ import 'package:stock_simulator_app/signup_page.dart';
 import 'package:stock_simulator_app/wrapper.dart';
 
 void main() async {
-
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp( const MaterialApp(
