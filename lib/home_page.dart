@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:stock_simulator_app/AnonymousUser/GuestWelcomePage.dart';
 import 'package:stock_simulator_app/main.dart';
-
 import 'firebase/firebase_auth.dart';
 
 class HomePage extends StatelessWidget {
+
+  final Auth auth = Auth();
+
   HomePage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {

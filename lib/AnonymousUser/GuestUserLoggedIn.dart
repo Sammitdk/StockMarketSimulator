@@ -37,7 +37,7 @@ class GuestUser extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.account_box_outlined), title: const Text("Create Account"),
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (_) => SignupPage()));
+                Navigator.push(context, MaterialPageRoute(builder: (_) => const SignupPage()));
               },
             ),
             ListTile(

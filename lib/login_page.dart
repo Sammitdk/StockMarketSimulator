@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:stock_simulator_app/PasswordRecovery.dart';
+import 'package:stock_simulator_app/password/password_recovery.dart';
 import 'package:stock_simulator_app/home_page.dart';
 import 'firebase/firebase_auth.dart';
 
@@ -8,7 +8,7 @@ class LoginPage extends StatelessWidget {
 
   final email = TextEditingController();
   final pass = TextEditingController();
-  Auth auth = Auth();
+  final Auth auth = Auth();
 
   @override
   Widget build(BuildContext context) {

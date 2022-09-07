@@ -27,17 +27,17 @@ class Auth{
     }
   }
   //sign out
-  Future<Stream?> signOut() async
+  Future signOut() async
   {
     try
     {
-      await auth.signOut();
+      return await auth.signOut();
     }
     catch(e)
     {
+      print(e.toString());
       return null;
     }
-    return null;
   }
 
   //guest login
