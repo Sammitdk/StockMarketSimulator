@@ -1,13 +1,18 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:stock_simulator_app/AnonymousUser/GuestWelcomePage.dart';
 import 'package:stock_simulator_app/main.dart';
 import 'firebase/firebase_auth.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  HomePage({Key? key,required this.info}) : super(key: key);
+  Map<String, dynamic> info;
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
 
+class _HomePageState extends State<HomePage> {
   final Auth auth = Auth();
 
-  HomePage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,9 +25,7 @@ class HomePage extends StatelessWidget {
           Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const MyApp()));
       }),
       appBar: AppBar(),
-      body: const Center(
-        child: Text("Fuck"),
-      ),
+      body: Center(child: Text(widget.info['Last']))
     );
   }
 }

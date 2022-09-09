@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:stock_simulator_app/dataloading.dart';
 import 'package:stock_simulator_app/home_page.dart';
 import 'package:stock_simulator_app/main.dart';
 import 'firebase/firebase_auth.dart';
@@ -14,7 +15,7 @@ class Wrapper extends StatelessWidget {
     if (auth.currentUser == null) {
       return const MyApp();
     } else {
-      return HomePage();
+      return const DataLoading();
     }
   }
 }
