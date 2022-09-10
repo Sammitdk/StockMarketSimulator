@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "83970540767",
+    "project_id": "stock-market-simulator-a6e0c",
+    "storage_bucket": "stock-market-simulator-a6e0c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:83970540767:android:7eba72e90c9cad7821956a",
+        "android_client_info": {
+          "package_name": "com.example.stock_simulator_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "83970540767-fbko3lg81iubhffibp323tkgbir8cfco.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEJcpgeWUDFBFT-ffb5Z5LITmobDWVZeY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "83970540767-fbko3lg81iubhffibp323tkgbir8cfco.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
