@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:stock_simulator_app/home_page.dart';
+import 'package:stock_simulator_app/loggeduser/home_page.dart';
 
 class DataLoading extends StatefulWidget {
   const DataLoading({Key? key}) : super(key: key);

@@ -2,7 +2,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:stock_simulator_app/main.dart';
-import 'firebase/firebase_auth.dart';
+import 'package:stock_simulator_app/settings/settings.dart';
+import '../firebase/firebase_auth.dart';
+
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key,required this.info}) : super(key: key);
@@ -38,7 +40,7 @@ class _HomePageState extends State<HomePage> {
             ListTile(
               leading: const Icon(Icons.settings), title: const Text ('Settings'),
               onTap: () {
-                //not yet created
+                Navigator.push(context, MaterialPageRoute(builder: (_) => const Setting()));
               },
             ),
             ListTile(
@@ -55,7 +57,7 @@ class _HomePageState extends State<HomePage> {
             ),
             ListTile(
               leading: const Icon(Icons.account_box_outlined), title: const Text("Log Out"),
-                   onTap: () async {
+                  onTap: () async {
                   await Auth().signOut();
                   Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const MyApp()));
               }
