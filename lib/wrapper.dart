@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:stock_simulator_app/dataloading.dart';
-import 'package:stock_simulator_app/home_page.dart';
+import 'package:stock_simulator_app/loggeduser/dataloading.dart';
+import 'package:stock_simulator_app/loggeduser/home_page.dart';
 import 'package:stock_simulator_app/main.dart';
 import 'firebase/firebase_auth.dart';
 

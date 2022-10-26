@@ -46,26 +46,24 @@ class SignupPage extends StatelessWidget {
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Mobile number',
-
                   ),
                 ),
-              ),const Padding(
+              ),
+              const Padding(
                 padding: EdgeInsets.fromLTRB(25, 10, 25, 10),
                 child: TextField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'E-mail',
-
                   ),
                 ),
-              ),const Padding(
+              ),
+              const Padding(
                 padding: EdgeInsets.fromLTRB(25, 10, 25, 10),
                 child: TextField(
-
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Password',
-
                   ),
                 ),
               ),
@@ -87,8 +85,7 @@ class SignupPage extends StatelessWidget {
                   height: 50,
                   width: 200,
                   child: ElevatedButton(onPressed: () {
-                    //logged in
-                    // Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const LoginPage()));
+
                   },
                       style: ButtonStyle(
                         minimumSize: MaterialStateProperty.all(const Size.fromRadius(18)),

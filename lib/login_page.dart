@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:stock_simulator_app/dataloading.dart';
+import 'package:stock_simulator_app/loggeduser/dataloading.dart';
 import 'package:stock_simulator_app/password/password_recovery.dart';
-import 'package:stock_simulator_app/home_page.dart';
+import 'package:stock_simulator_app/loggeduser/home_page.dart';
 import 'firebase/firebase_auth.dart';
 
 class LoginPage extends StatelessWidget {
@@ -34,7 +34,7 @@ class LoginPage extends StatelessWidget {
               controller: email,
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
-                labelText: 'Username /email',
+                labelText: 'Email',
                 // hintText: 'Enter valid email !',
               ),
             ),
